@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the same Map as before 1`] = `
+Array [
+  <p
+    className="floor"
+  >
+    This will say what floor you are looking at
+  </p>,
+  <img />,
+]
+`;

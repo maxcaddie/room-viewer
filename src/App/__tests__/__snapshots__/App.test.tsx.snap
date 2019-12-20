@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders app correctly 1`] = `
+<div
+  className="App"
+>
+  <p
+    className="floor"
+  >
+    This will say what floor you are looking at
+  </p>
+  <img />
+</div>
+`;
