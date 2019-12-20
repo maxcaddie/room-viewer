@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -21,3 +22,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+=======
+# Ignore Mac system files
+.DS_store
+
+# Ignore node_modules folder
+node_modules
+>>>>>>> d07f925305779776f39af187232ff41a8a31ec12
