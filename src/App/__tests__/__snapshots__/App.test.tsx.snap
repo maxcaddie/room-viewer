@@ -9,6 +9,8 @@ exports[`renders app correctly 1`] = `
   >
     This will say what floor you are looking at
   </p>
-  <img />
+  <img
+    src="./floors/MB2.jpg"
+  />
 </div>
 `;

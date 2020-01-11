@@ -11,13 +11,17 @@ it('renders the same Map as before',()=>{
     expect(mapComponent).toMatchSnapshot();
 });
 
-it('has an image',()=>{
-    var mapComponent = renderer.create(<Map />);    
-    mapComponent.root.findByType("img");
-});
+
 
 it('has floor explination text with floor tag',()=>{
     var mapComponent = renderer.create(<Map />);    
     mapComponent.root.findByProps({className:"floor"});
 });
 
+describe('images load correctly',()=>{
+    it('has an image',()=>{
+        var mapComponent = renderer.create(<Map />);    
+        mapComponent.root.findByType("img");
+    });
+    
+})

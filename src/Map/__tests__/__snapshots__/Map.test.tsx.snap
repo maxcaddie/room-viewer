@@ -7,6 +7,8 @@ Array [
   >
     This will say what floor you are looking at
   </p>,
-  <img />,
+  <img
+    src="./floors/MB2.jpg"
+  />,
 ]
 `;
