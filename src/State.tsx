@@ -11,14 +11,14 @@ export function changeFloor() {
 }
 
 //Reducer
-const floor = (state = 0, action: any) => {
+const floor = (floor = 0, action: any) => {
   switch (action.type) {
     case "CHANGEFLOOR":
-      state = state + 1;
-      return state;
+      floor = floor + 1;
+      return floor;
 
     default:
-      return state;
+      return floor;
   }
 };
 
@@ -27,6 +27,6 @@ export const store = createStore(
   compose((window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__())
 );
 
-store.subscribe(() => console.log(store.getState()));
+// store.subscribe(() => console.log(store.getState()));
 
 store.dispatch(changeFloor());
