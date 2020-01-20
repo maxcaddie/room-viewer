@@ -1,7 +1,7 @@
 //externals
 
 //@ts-ignore
-import { createStore } from "redux";
+import { createStore, compose } from "redux";
 
 //Actions
 export function changeFloor() {
@@ -22,7 +22,10 @@ const floor = (state = 0, action: any) => {
   }
 };
 
-export let store = createStore(floor);
+export const store = createStore(
+  floor,
+  compose((window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__())
+);
 
 store.subscribe(() => console.log(store.getState()));
 
