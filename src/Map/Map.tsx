@@ -1,26 +1,20 @@
 //Internals
-import { store, changeFloor } from "../State";
+import { store } from "../State";
+import { changeFloor } from "../redux/actions/floorActions";
 
 //Externals
-import React, { useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
-
-interface IMapProps {
-  floor?: string;
-}
-
-function inc(getter: number, setter: React.Dispatch<React.SetStateAction<number>>) {
-  setter(getter + 1);
-}
+import { Floors, numToFloor } from "../constants/Floor";
 
 const Map: React.FC = () => {
-  const [count, setCount] = useState(0);
-
+  const floorOn = useSelector(store.getState);
   return (
     <React.Fragment>
+      <button onClick={() => numToFloor(floorOn)}> FLOORT </button>
       <button onClick={() => store.dispatch(changeFloor())}>CLICK</button>
-      <p className="floor">This will say what floor you are looking at {useSelector(store.getState)}</p>
-      <img src="./floors/MB2.jpg" alt="A floor" />
+      <p className="floor">This will say what floor you are looking at {floorOn}</p>
+      <img src={Floors.floor1} alt="A floor" />
     </React.Fragment>
   );
 };
