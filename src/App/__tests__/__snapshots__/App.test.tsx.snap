@@ -4,12 +4,24 @@ exports[`renders app correctly 1`] = `
 <div
   className="App"
 >
+  <button
+    onClick={[Function]}
+  >
+     FLOORT 
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    CLICK
+  </button>
   <p
     className="floor"
   >
-    This will say what floor you are looking at
+    This will say what floor you are looking at 
+    1
   </p>
   <img
+    alt="A floor"
     src="./floors/MB2.jpg"
   />
 </div>

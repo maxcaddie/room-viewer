@@ -8,5 +8,5 @@ export function numToFloor(floorNumber: number) {
   while (floorNumber >= NUMBER_OF_FLOORS) {
     floorNumber = floorNumber - NUMBER_OF_FLOORS;
   }
-  console.log(Object.keys(Floors)[floorNumber]);
+  return Object.values(Floors)[floorNumber];
 }
