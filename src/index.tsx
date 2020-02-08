@@ -6,8 +6,14 @@ import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import { store } from "./State";
 
+//Stylesheets
+import "bootstrap/dist/css/bootstrap.min.css";
+
 ReactDOM.render(
   <Provider store={store}>
+    <head>
+      <style>{"body { background-color: red; }"}</style>
+    </head>
     <App />
   </Provider>,
   document.getElementById("root")
