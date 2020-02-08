@@ -2,3 +2,8 @@
   color: red;
   text-align: end;
 }
+
+.floorMap {
+  width: 70vw;
+  min-width: 1000px;
+}

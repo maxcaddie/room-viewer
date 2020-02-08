@@ -12,7 +12,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 ReactDOM.render(
   <Provider store={store}>
     <head>
-      <style>{"body { background-color: red; }"}</style>
+      <style>{"body { background-color: #de2e58; }"}</style>
     </head>
     <App />
   </Provider>,
