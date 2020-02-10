@@ -1,6 +1,6 @@
 //Internals
 import { store } from "../State";
-import { changeFloor } from "../redux/actions/floorActions";
+import { nextFloor, prevFloor } from "../redux/actions/floorActions";
 import "./Map.css";
 
 //Externals
@@ -13,11 +13,15 @@ const Map: React.FC = () => {
   const floorOn = useSelector(store.getState);
   return (
     <React.Fragment>
-      <Button variant="light" onClick={() => store.dispatch(changeFloor())} className="button">
+      {/* <Button variant="light" onClick={() => store.dispatch(nextFloor())} className="button">
         Next Floor
-      </Button>
+      </Button> */}
       <p className="floor">{numToFloorName(floorOn)}</p>
-      <img src={numToFloor(floorOn)} alt={numToFloor(floorOn)} className="floorMap" />
+      <div>
+        <button onClick={() => store.dispatch(prevFloor())}>Previous</button>
+        <img src={numToFloor(floorOn)} alt={numToFloor(floorOn)} className="floorMap" />
+        <button onClick={() => store.dispatch(nextFloor())}>Next</button>
+      </div>
     </React.Fragment>
   );
 };

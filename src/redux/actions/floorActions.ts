@@ -1,6 +1,12 @@
-export function changeFloor() {
+export function nextFloor() {
   return {
-    type: "CHANGEFLOOR"
+    type: "NEXTFLOOR"
+  };
+}
+
+export function prevFloor() {
+  return {
+    type: "PREVIOUSFLOOR"
   };
 }
 

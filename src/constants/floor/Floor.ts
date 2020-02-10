@@ -7,12 +7,19 @@ export enum Floors {
 }
 export const NUMBER_OF_FLOORS = 5;
 
+function convertToBounded(value: number, maxValue: number) {
+  if (value >= 0) {
+    return value % maxValue;
+  }
+  return ((value % maxValue) + maxValue) % maxValue;
+}
+
 export function numToFloor(floorNumber: number) {
-  floorNumber = floorNumber % NUMBER_OF_FLOORS;
+  floorNumber = convertToBounded(floorNumber, NUMBER_OF_FLOORS);
   return Object.values(Floors)[floorNumber];
 }
 
 export function numToFloorName(floorNumber: number) {
-  floorNumber = floorNumber % NUMBER_OF_FLOORS;
+  floorNumber = convertToBounded(floorNumber, NUMBER_OF_FLOORS);
   return Object.keys(Floors)[floorNumber];
 }
