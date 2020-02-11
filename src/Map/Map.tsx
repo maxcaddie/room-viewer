@@ -7,15 +7,22 @@ import "./Map.css";
 import React from "react";
 import { useSelector } from "react-redux";
 import { numToFloor, numToFloorName } from "../constants/floor/Floor";
-import Button from "react-bootstrap/Button";
+
+document.onkeydown = function(e) {
+  e = e || window.event;
+  if (e.keyCode === 65 || e.keyCode === 37) {
+    store.dispatch(prevFloor());
+  }
+  if (e.keyCode === 68 || e.keyCode === 39) {
+    store.dispatch(nextFloor());
+  }
+};
 
 const Map: React.FC = () => {
   const floorOn = useSelector(store.getState);
+
   return (
     <React.Fragment>
-      {/* <Button variant="light" onClick={() => store.dispatch(nextFloor())} className="button">
-        Next Floor
-      </Button> */}
       <p className="floor">{numToFloorName(floorOn)}</p>
       <div>
         <button onClick={() => store.dispatch(prevFloor())}>Previous</button>
