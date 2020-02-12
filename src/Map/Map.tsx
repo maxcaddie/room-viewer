@@ -4,21 +4,24 @@ import { nextFloor, prevFloor } from "../redux/actions/floorActions";
 import "./Map.css";
 
 //Externals
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { numToFloor, numToFloorName } from "../constants/floor/Floor";
-
-document.onkeydown = function(e) {
-  e = e || window.event;
-  if (e.keyCode === 65 || e.keyCode === 37) {
-    store.dispatch(prevFloor());
-  }
-  if (e.keyCode === 68 || e.keyCode === 39) {
-    store.dispatch(nextFloor());
-  }
-};
+import { isGoBack, isGoForward } from "../constants/map/Map";
 
 const Map: React.FC = () => {
+  useEffect(() => {
+    document.onkeydown = function(e) {
+      e = e || window.event;
+      if (isGoBack(e.keyCode)) {
+        store.dispatch(prevFloor());
+      }
+      if (isGoForward(e.keyCode)) {
+        store.dispatch(nextFloor());
+      }
+    };
+  });
+
   const floorOn = useSelector(store.getState);
 
   return (
