@@ -1,9 +1,13 @@
-.button {
+.navigationArrows {
   color: red;
-  text-align: end;
+  height: 70vh;
+  width: 10vw;
+  font-size: 20vh;
+  background-color: transparent;
 }
 
 .floorMap {
   width: 70vw;
   min-width: 600px;
+  height: 80vh;
 }
