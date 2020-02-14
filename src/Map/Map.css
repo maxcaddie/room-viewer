@@ -12,6 +12,7 @@
   background-color: transparent;
   border-color: transparent;
   bottom: 0px;
+  outline: none !important;
 }
 
 .left {
