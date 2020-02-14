@@ -1,13 +1,30 @@
+.container {
+  width: auto;
+  min-width: 600px;
+  height: 90vh;
+  border-color: black;
+  position: relative;
+}
+
 .navigationArrows {
-  color: red;
-  height: 70vh;
-  width: 10vw;
-  font-size: 20vh;
+  height: 100%;
+  width: 50%;
   background-color: transparent;
+  border-color: transparent;
+  bottom: 0px;
+}
+
+.left {
+  position: absolute;
+  left: 0px;
+}
+
+.right {
+  position: absolute;
+  right: 0px;
 }
 
 .floorMap {
-  width: 70vw;
-  min-width: 600px;
-  height: 80vh;
+  width: 100%;
+  height: 100%;
 }
