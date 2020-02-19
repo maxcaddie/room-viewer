@@ -31,3 +31,9 @@
   height: 100%;
   max-height: 110vw;
 }
+
+.floor {
+  font-family: "Adelle, Arial";
+  color: white;
+  font-size: 20px;
+}
