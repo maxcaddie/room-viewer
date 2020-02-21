@@ -22,7 +22,7 @@ const Map: React.FC = () => {
     };
   });
 
-  const floorOn = useSelector(store.getState);
+  const floorOn = useSelector(store.getState).floor;
 
   return (
     <React.Fragment>
