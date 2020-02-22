@@ -1,5 +1,6 @@
 //Internals
 import Map from "../Map/Map";
+import Header from "../Header/Header";
 
 //Externals
 import React from "react";
@@ -10,6 +11,7 @@ import "./App.css";
 const App: React.FC = () => {
   return (
     <div className="App">
+      <Header />
       <Map />
     </div>
   );

@@ -1,13 +1,15 @@
 //Internals
-import { store } from "../State";
-import { nextFloor, prevFloor } from "../redux/actions/floorActions";
-import "./Map.css";
+import { store } from "../../State";
+import { nextFloor, prevFloor } from "../../redux/actions/floorActions";
+import { numToFloor, numToFloorName } from "../../constants/floor/Floor";
+import { isGoBack, isGoForward } from "../../constants/map/Map";
 
 //Externals
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { numToFloor, numToFloorName } from "../constants/floor/Floor";
-import { isGoBack, isGoForward } from "../constants/map/Map";
+
+//Stylesheets
+import "./Map.css";
 
 const Map: React.FC = () => {
   useEffect(() => {

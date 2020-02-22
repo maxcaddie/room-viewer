@@ -5,7 +5,7 @@ import Map from "../Map";
 import React from "react";
 import renderer from "react-test-renderer";
 import { Provider } from "react-redux";
-import { store } from "../../State";
+import { store } from "../../../State";
 
 
 it("has floor explination text with floor tag", () => {

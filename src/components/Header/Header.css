@@ -1,0 +1,6 @@
+.sticky {
+  position: sticky;
+  top: 0px;
+  /* Forces on top of other elements */
+  z-index: 100;
+}

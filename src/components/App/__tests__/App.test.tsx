@@ -6,7 +6,7 @@ import Map from "../../Map/Map";
 import React from "react";
 import renderer from "react-test-renderer";
 import { Provider } from "react-redux";
-import { store } from "../../State";
+import { store } from "../../../State";
 
 it("the outermost div has the className app", () => {
   const appComponent = renderer.create(
