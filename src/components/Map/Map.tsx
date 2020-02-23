@@ -28,7 +28,8 @@ const Map: React.FC = () => {
 
   return (
     <React.Fragment>
-      <p className="floor">{numToFloorName(floorOn)}</p>
+      <style>{"body { background-color: #e9ebef; }"}</style>
+      {/* <p className="floor">{numToFloorName(floorOn)}</p> */}
       <div className="container">
         <img src={numToFloor(floorOn)} alt={numToFloor(floorOn)} className="floorMap" />
         <button className="navigationArrows left" onClick={() => store.dispatch(prevFloor())} />

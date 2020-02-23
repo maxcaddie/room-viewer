@@ -1,6 +1,16 @@
 .sticky {
-  position: sticky;
+  position: fixed;
   top: 0px;
+  width: 100%;
   /* Forces on top of other elements */
   z-index: 100;
+}
+.header {
+  height: 75px;
+  color: white;
+  padding: 10px 0;
+}
+
+.mainColourBackground {
+  background-color: #de2e58;
 }

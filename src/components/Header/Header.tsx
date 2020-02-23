@@ -6,7 +6,7 @@ import "./Header.css";
 
 const Header: React.FC = () => {
   return (
-    <div className="Header sticky">
+    <div className="header sticky mainColourBackground">
       <p>HEY</p>
     </div>
   );
