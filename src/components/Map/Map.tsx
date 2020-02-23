@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 
 //Stylesheets
 import "./Map.css";
+import { MOBILE_SIZE } from "../../constants/MobileView";
 
 const Map: React.FC = () => {
   useEffect(() => {
@@ -32,7 +33,12 @@ const Map: React.FC = () => {
       {/* <p className="floor">{numToFloorName(floorOn)}</p> */}
       <div className="container">
         <img src={numToFloor(floorOn)} alt={numToFloor(floorOn)} className="floorMap" />
-        <button className="navigationArrows left" onClick={() => store.dispatch(prevFloor())} />
+        <button
+          className="navigationArrows left"
+          onClick={() => {
+            window.innerWidth > MOBILE_SIZE ? store.dispatch(prevFloor()) : store.dispatch(nextFloor());
+          }}
+        />
         <button className="navigationArrows right" onClick={() => store.dispatch(nextFloor())} />
       </div>
     </React.Fragment>
