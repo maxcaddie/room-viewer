@@ -7,7 +7,7 @@ import "./Header.css";
 const Header: React.FC = () => {
   return (
     <div className="header sticky mainColourBackground">
-      <p>HEY</p>
+      <img src="./FishStuff/Logo.png" alt="Fishbowls logo" className="logo" />
     </div>
   );
 };

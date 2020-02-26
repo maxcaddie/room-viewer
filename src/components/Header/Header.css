@@ -14,3 +14,9 @@
 .mainColourBackground {
   background-color: #de2e58;
 }
+
+.logo {
+  float: left;
+  margin-left: 10px;
+  height: 100%;
+}
