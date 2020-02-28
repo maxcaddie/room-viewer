@@ -18,5 +18,15 @@
 .logo {
   float: left;
   margin-left: 10px;
+  margin-top: 0px;
   height: 100%;
+}
+
+.home {
+  float: right;
+  margin-right: 10px;
+  height: 95%;
+  background-color: transparent;
+  border-color: transparent;
+  outline: none !important;
 }
