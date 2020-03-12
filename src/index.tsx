@@ -5,13 +5,19 @@ import App from "./components/App/App";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import { store } from "./State";
+import { createBrowserHistory } from "history";
 
 //Stylesheets
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Router, Route } from "react-router-dom";
+
+const history = createBrowserHistory();
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router history={history}>
+      <Route exact path="/" component={App} />
+    </Router>
   </Provider>,
   document.getElementById("root")
 );
